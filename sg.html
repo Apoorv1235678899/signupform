@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Odin Sign Up</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"/>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+      margin: 0;
+      display: flex;
+      height: 100vh;
+    }
+
+    .left-side {
+      background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1050&q=80');
+      background-size: cover;
+      background-position: center;
+      flex: 1;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .logo {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 1rem 2rem;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .logo img {
+      height: 50px;
+    }
+
+    .right-side {
+      flex: 2;
+      padding: 3rem;
+      background-color: #f9fafb;
+    }
+
+    .intro {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 2rem;
+    }
+
+    form {
+      background-color: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    form h2 {
+      margin-bottom: 1rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+      letter-spacing: 1px;
+    }
+
+    .form-group input {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    .form-group input:invalid {
+      border-color: red;
+    }
+
+    .submit-section {
+      margin-top: 1.5rem;
+    }
+
+    .submit-section button {
+      padding: 0.7rem 1.5rem;
+      background-color: #596D48;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .login-link {
+      margin-top: 1rem;
+    }
+
+    .login-link a {
+      color: #596D48;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="left-side">
+    <div class="logo">
+      <img src="https://cdn.statically.io/gh/TheOdinProject/curriculum/main/intermediate_html_css/forms/project_sign_up_form/imgs/odin-lined.png" alt="Odin logo">
+      ODIN
+    </div>
+    <div style="position: absolute; bottom: 10px; font-size: 12px;">
+      Photo by Halie West on Unsplash
+    </div>
+  </div>
+
+  <div class="right-side">
+    <div class="intro">
+      This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up <em>now</em> to get started.  
+      <br/><br/>
+      <strong>You <em>know</em> you want to.</strong>
+    </div>
+
+    <form>
+      <h2>Let’s do this!</h2>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="first-name">First Name</label>
+          <input type="text" id="first-name" name="first-name" required>
+        </div>
+        <div class="form-group">
+          <label for="last-name">Last Name</label>
+          <input type="text" id="last-name" name="last-name" required>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone">
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" name="password" required>
+        </div>
+        <div class="form-group">
+          <label for="confirm-password">Confirm Password</label>
+          <input type="password" id="confirm-password" name="confirm-password" required>
+        </div>
+      </div>
+
+      <div class="submit-section">
+        <button type="submit">Create Account</button>
+      </div>
+      <div class="login-link">
+        Already have an account? <a href="#">Log in</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
